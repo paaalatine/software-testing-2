@@ -1,6 +1,7 @@
 package paaalatine.system;
 
 import org.junit.Test;
+import paaalatine.CsvWriter;
 import paaalatine.TestUtil;
 
 public class FunctionSystemTest1 {
@@ -60,5 +61,11 @@ public class FunctionSystemTest1 {
     @Test
     public void afterTrigonometryExtrema() {
         util.check(-10.996 + 0.01, PRECISION);
+    }
+
+    @Test
+    public void writeCsv() {
+        CsvWriter cvsWriter = new CsvWriter(new FunctionSystem());
+        cvsWriter.write(-10, 10, 1);
     }
 }

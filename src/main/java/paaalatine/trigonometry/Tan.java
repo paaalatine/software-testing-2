@@ -1,9 +1,7 @@
 package paaalatine.trigonometry;
 
-import com.sun.xml.internal.ws.developer.MemberSubmissionEndpointReference;
 import paaalatine.AbstractFunction;
 
-import static java.lang.Double.NaN;
 import static java.lang.Double.POSITIVE_INFINITY;
 import static java.lang.Math.PI;
 

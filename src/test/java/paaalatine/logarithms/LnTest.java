@@ -1,6 +1,7 @@
 package paaalatine.logarithms;
 
 import org.junit.Test;
+import paaalatine.CsvWriter;
 import paaalatine.TestUtil;
 
 import static java.lang.Math.E;
@@ -68,5 +69,11 @@ public class LnTest {
     @Test
     public void afterBase() {
         util.check(BASE + 0.01, PRECISION);
+    }
+
+    @Test
+    public void writeCsv() {
+        CsvWriter cvsWriter = new CsvWriter(new Ln());
+        cvsWriter.write(0, 20, 1);
     }
 }

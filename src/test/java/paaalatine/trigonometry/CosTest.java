@@ -1,6 +1,7 @@
 package paaalatine.trigonometry;
 
 import org.junit.Test;
+import paaalatine.CsvWriter;
 import paaalatine.TestUtil;
 
 import static java.lang.Math.PI;
@@ -48,5 +49,11 @@ public class CosTest {
     @Test
     public void halfPiToPi() {
         util.checkRange(PI / 2, PI, PI / 4, PRECISION);
+    }
+
+    @Test
+    public void writeCsv() {
+        CsvWriter cvsWriter = new CsvWriter(new Cos());
+        cvsWriter.write(-10, 10, 1);
     }
 }
